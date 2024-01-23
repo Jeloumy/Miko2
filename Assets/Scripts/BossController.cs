@@ -22,8 +22,11 @@ public class BossController : MonoBehaviour
 
     void LaunchFireball()
     {
-       Instantiate(fireballPrefab, transform.position, Quaternion.identity);
-        Invoke("LaunchFireball", fireballDelay);
+    GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
+
+    // Pas besoin de code supplémentaire pour démarrer l'animation si elle est configurée pour démarrer automatiquement
+
+    Invoke("LaunchFireball", fireballDelay);
     }
 
     void ToggleDarkness()
