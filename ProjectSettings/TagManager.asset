@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ground
   - Enemy
+=======
+  - SolTag
+  - Ennemi
+>>>>>>> StartScene
   layers:
   - Default
   - TransparentFX
