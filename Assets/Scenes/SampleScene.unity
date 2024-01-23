@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33525012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33525013}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33525013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33525012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7842083, y: 0.6044264, z: -0.0410382}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &320652802
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +189,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 2050534672}
   - {fileID: 1277646216}
+  damageCollision: 100
   graphics: {fileID: 320652805}
 --- !u!61 &320652804
 BoxCollider2D:
@@ -578,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 532553674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49, y: -0.54, z: 0}
+  m_LocalPosition: {x: -3.49, y: -0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,6 +651,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  invincibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.2
+  isInvincible: 0
+  graphics: {fileID: 0}
   healthBar: {fileID: 1123876298}
 --- !u!1 &597886012
 GameObject:
@@ -811,8 +847,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.049999952, y: 0.0051728}
-  m_SizeDelta: {x: 0.6168, y: 0.61677}
+  m_AnchoredPosition: {x: 0.28239822, y: 0.42231}
+  m_SizeDelta: {x: 19.5402, y: 19.539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639188048
 MonoBehaviour:
@@ -1594,7 +1630,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123876296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1606,8 +1642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -358.02, y: -55.57}
-  m_SizeDelta: {x: 3.5326, y: 0.5225}
+  m_AnchoredPosition: {x: -151.2, y: 127.4}
+  m_SizeDelta: {x: 75.0472, y: 18.6512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123876298
 MonoBehaviour:
@@ -2063,3 +2099,4 @@ SceneRoots:
   - {fileID: 1378417113}
   - {fileID: 1206180679}
   - {fileID: 1367636052}
+  - {fileID: 33525013}
