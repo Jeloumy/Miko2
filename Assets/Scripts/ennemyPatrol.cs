@@ -6,6 +6,7 @@ public class ennemyPatrol : MonoBehaviour
 {
     public float speed;
     public Transform[] waypoints;
+    
     public SpriteRenderer graphics; 
 
     private Transform target;
@@ -31,4 +32,6 @@ public class ennemyPatrol : MonoBehaviour
             graphics.flipX = !graphics.flipX;
         }
     }
+
+    
 }
