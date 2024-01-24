@@ -6,11 +6,11 @@ public class FireBallMouvement : MonoBehaviour
 {
 
     public float speed = 2.0f;
-    private Vector2 direction;
+     private Vector2 direction = Vector2.left; 
     // Start is called before the first frame update
     void Start()
     {
-                direction = Random.Range(0, 2) == 0 ? Vector2.left : Vector2.right;
+                direction = Vector2.left;
     }
 
     // Update is called once per frame
