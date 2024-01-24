@@ -6,12 +6,12 @@ public class BossController : MonoBehaviour
 {
     public GameObject fireballPrefab;
     public GameObject meteoritePrefab; 
-    private float fireballDelay = 7f;
+    private float fireballDelay = 2f;
     public GameObject darknessSquare; 
     public GameObject playerSquare; 
-    private float darknessDelay = 13f;
+    private float darknessDelay = 10f;
     private float darknessDuration = 5f;
-    private float meteoriteDelay = 30f; 
+    private float meteoriteDelay = 10f; 
 
     private void Start()
     {
@@ -22,9 +22,14 @@ public class BossController : MonoBehaviour
 
     void LaunchFireball()
     {
-    GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
+    GameObject fireballInstance = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
 
-    // Pas besoin de code supplémentaire pour démarrer l'animation si elle est configurée pour démarrer automatiquement
+    // Assurez-vous que l'Animator est bien réveillé et prêt à jouer l'animation
+    Animator fireballAnimator = fireballInstance.GetComponent<Animator>();
+    if (fireballAnimator != null)
+    {
+        fireballAnimator.Rebind();
+    }
 
     Invoke("LaunchFireball", fireballDelay);
     }
@@ -53,19 +58,14 @@ void LaunchMeteorites()
     int meteoriteCount = Random.Range(2, 4); // Lance 2 ou 3 météorites
     for (int i = 0; i < meteoriteCount; i++)
     {
-        // Position aléatoire en haut
         Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), 10f, 0f);
-
         GameObject meteorite = Instantiate(meteoritePrefab, spawnPosition, Quaternion.identity);
-        
-        // Ajoutez ici un Rigidbody2D à votre préfabriqué de météorite pour gérer la physique
         Rigidbody2D rb = meteorite.GetComponent<Rigidbody2D>();
-
-        // Vitesse aléatoire vers le bas et sur les côtés
         float horizontalSpeed = Random.Range(-3f, 3f); // Vitesse horizontale aléatoire
-        float verticalSpeed = -Random.Range(1f, 5f); // Vitesse verticale aléatoire (toujours vers le bas)
+        float verticalSpeed = -Random.Range(3f, 7f); // Augmenter la vitesse verticale
         rb.velocity = new Vector2(horizontalSpeed, verticalSpeed);
     }
 }
+
 
 }

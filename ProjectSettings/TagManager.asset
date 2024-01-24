@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Enemy
   - Liberer
+  - coin
+  - Coin
   layers:
   - Default
   - TransparentFX

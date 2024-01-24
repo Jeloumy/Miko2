@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class FireBallMouvement : MonoBehaviour
 {
-
     public float speed = 2.0f;
-     private Vector2 direction = Vector2.left; 
-    // Start is called before the first frame update
+    private Vector2 direction; // Déclaration de la direction
+
     void Start()
     {
-                direction = Vector2.left;
+        // Angle aléatoire pour la direction initiale
+        float angle = Random.Range(-30f, 30f);
+        direction = Quaternion.Euler(0, 0, angle) * Vector2.left;
     }
 
-    // Update is called once per frame
     void Update()
     {
-         transform.Translate(direction * speed * Time.deltaTime);
+        // Appliquer le mouvement
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 }
+
+
