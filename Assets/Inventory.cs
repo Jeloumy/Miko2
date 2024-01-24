@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
     public int coinsCount;
     public Text coinsCountText;
+    public int specialItemsCount;
+    public Text specialItemsCountText;
 
     public static Inventory instance;
 
@@ -29,15 +32,21 @@ public class Inventory : MonoBehaviour
             // Le joueur gagne
             WinGame();
         }
-
-
     }
+
+    public void AddSpecialItem(int count)
+    {
+        specialItemsCount += count;
+        specialItemsCountText.text = specialItemsCount.ToString();
+     }
+
+
     private void WinGame()
     {
         // Code pour gérer la victoire
         Debug.Log("Victoire! Tu as collecté 5 pièces!");
-
-        // Par exemple, tu pourrais charger une scène de victoire ou afficher un écran de victoire
-        // SceneManager.LoadScene("NomDeLaSceneDeVictoire");
+        
+        SceneManager.LoadScene("Level2");
+        Inventory.instance.AddSpecialItem(1);
     }
 }
