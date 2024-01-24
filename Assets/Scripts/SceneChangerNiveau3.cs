@@ -20,6 +20,6 @@ public class SceneChangerNiveau3 : MonoBehaviour
     
         private void OnMouseDown()
     {
-        SceneManager.LoadScene("Niveau3Scene");
+        SceneManager.LoadScene("Niveau2Scene");
     }
 }

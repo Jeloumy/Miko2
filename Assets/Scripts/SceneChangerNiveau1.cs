@@ -18,6 +18,7 @@ public class SceneChangerNiveau1 : MonoBehaviour
 
         private void OnMouseDown()
     {
-        SceneManager.LoadScene("Niveau1Scene");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MondeScene");
     }
 }

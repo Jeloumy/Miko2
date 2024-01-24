@@ -19,6 +19,8 @@ public class SceneChangerNiveau2 : MonoBehaviour
     
         private void OnMouseDown()
     {
-        SceneManager.LoadScene("Niveau2Scene");
+        // Réinitialiser le temps avant de recharger la scène
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Niveau1Scene");
     }
 }
