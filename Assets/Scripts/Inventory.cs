@@ -27,11 +27,7 @@ public class Inventory : MonoBehaviour
     {
         coinsCount += count;
         coinsCountText.text = coinsCount.ToString();
-        if (coinsCount >= 5)
-        {
-            // Le joueur gagne
-            WinGame();
-        }
+        
     }
 
     public void AddSpecialItem(int count)
