@@ -1190,7 +1190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4019f932dc8c0746b26169b16548f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  levelManager: {fileID: 0}
+  health: 5
 --- !u!1 &641374823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,7 +2399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0ef844883a3864080e1fc898c65868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 6608982482771087633, guid: 765dd613d8f9f0f4caa3bdedbd1a56ae, type: 3}
+  coinPrefab: {fileID: 6608982482771087633, guid: 9433dbe95ebd8004cbb015f13dfe7903, type: 3}
   launchForce: 10
 --- !u!1 &1261970781
 GameObject:
